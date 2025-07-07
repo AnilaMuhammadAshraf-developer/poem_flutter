@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:poem/utils/app_routes.dart';
-import 'package:poem/utils/app_strings.dart';
+import 'package:noorflix/utils/app_routes.dart';
+import 'package:noorflix/utils/app_strings.dart';
 
 void main(){
   runApp(const MyApp());

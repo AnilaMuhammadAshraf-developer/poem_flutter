@@ -1,5 +1,6 @@
 import 'package:go_router/go_router.dart';
-import 'package:poem/screens/home.dart';
+import 'package:noorflix/screens/home.dart';
+
 
 class AppRoutes {
   static final appRouter=GoRouter(
