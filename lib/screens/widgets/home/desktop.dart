@@ -57,7 +57,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // Center(child: Text("mobile")),
+        // Center(child: Text("desktop")),
        
             Text(AppStrings.mainHeading,style: TextStyle(color:AppColors.blackColor,fontSize: 32,fontWeight: FontWeight.bold),),
             Text(AppStrings.detailText,style: TextStyle(color:AppColors.blackColor,fontWeight: FontWeight.w500)),
@@ -84,6 +84,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                 ),
                 child: Column(
                   children: [
+                    SizedBox(height:15),
                     controller.value.isInitialized
                         ? Container(
                           
@@ -91,16 +92,16 @@ class _HomeDesktopState extends State<HomeDesktop> {
                             color:Colors.black,
                           
                           ),
-                          height: 130,
+                          height: 300,
                           width: double.infinity,
                           child: VideoPlayer(controller),
                         )
                         : SizedBox(
-                          height: 130,
+                          height: 300,
                           child: Center(child: CircularProgressIndicator()),
                         ),
 
-                    Text(naat['title'],style: TextStyle(fontWeight: FontWeight.bold),),
+                    Text(naat['title'],style: TextStyle(fontWeight: FontWeight.bold),maxLines: 1,overflow: TextOverflow.ellipsis,),
                     IconButton(
                       icon: Icon(
                         controller.value.isPlaying
@@ -119,7 +120,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
               crossAxisCount: 2,
               crossAxisSpacing: 12,
               mainAxisSpacing: 12,
-              childAspectRatio: 3 / 3,
+              childAspectRatio: 4/ 3,
             ),
           ),
         ),

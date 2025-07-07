@@ -84,6 +84,7 @@ class _HomeMobileState extends State<HomeMobile> {
                 ),
                 child: Column(
                   children: [
+                            SizedBox(height:3),
                     controller.value.isInitialized
                         ? Container(
                           
@@ -100,7 +101,7 @@ class _HomeMobileState extends State<HomeMobile> {
                           child: Center(child: CircularProgressIndicator()),
                         ),
 
-                    Text(naat['title'],style: TextStyle(fontWeight: FontWeight.bold),),
+                    Text(naat['title'],style: TextStyle(fontWeight: FontWeight.bold),maxLines: 1,overflow: TextOverflow.ellipsis,),
                     IconButton(
                       icon: Icon(
                         controller.value.isPlaying
